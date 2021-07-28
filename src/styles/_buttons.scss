@@ -1,0 +1,53 @@
+.button {
+  --color: var(--white);
+  --bgColor: var(--orange);
+
+  font: normal normal 600 21px/28px var(--fontFamily);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  outline: none;
+  border-radius: 1px;
+  border: 2px solid var(--bgColor);
+  background-color: var(--bgColor);
+  color: var(--color);
+  padding: 18px 53px;
+  box-shadow: 0 0 10px rgba(33, 33, 33, 0.15);
+  cursor: pointer;
+
+  // Sizes
+  &.small {
+    padding: 18px 12px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &.large {
+    padding: unset;
+    width: 100%;
+  }
+
+  // States
+  &:hover:not(:disabled) {
+    text-decoration: none;
+    color: var(--color);
+    filter: brightness(1.1);
+    box-shadow: 0 0 21px rgba(33, 33, 33, 0.2);
+  }
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+    filter: brightness(0.9);
+  }
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  // Colors
+  &.primary {
+    --color: white;
+    --bgColor: var(--black);
+  }
+}

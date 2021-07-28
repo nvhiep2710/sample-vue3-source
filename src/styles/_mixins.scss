@@ -1,0 +1,29 @@
+@mixin input {
+  justify-self: stretch;
+  align-self: center;
+  width: 100%;
+  min-height: 40px;
+  padding: 20px 16px;
+  border: none;
+  border-radius: 1px;
+
+  color: var(--white);
+  background-color: var(--black100);
+
+  font-size: 20px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}

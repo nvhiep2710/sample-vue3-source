@@ -1,0 +1,54 @@
+.signUpPage {
+  --logoDesktop: 274px;
+  --logoMobile: 200px;
+  --widthBox: 610px;
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(60, 60, 60, 1) 100%
+  );
+
+  .loginBox {
+    width: 100%;
+    padding: 100px 10px 200px;
+
+    @media (min-width: 960px) {
+      padding: 177px 0 290px;
+      width: var(--widthBox);
+      margin: 0 auto;
+    }
+
+    > .logo {
+      width: var(--logoMobile);
+      height: var(--logoMobile) / 2;
+      margin: 0 auto;
+      padding-bottom: 80px;
+
+      @media (min-width: 960px) {
+        width: var(--logoDesktop);
+        height: var(--logoDesktop) / 2;
+        padding-bottom: 116px;
+      }
+    }
+
+    > .step {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--grey100);
+    }
+
+    > .title {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 36px;
+      padding: 14px 0 20px;
+    }
+  }
+
+  button {
+    padding: 24px 0 !important;
+  }
+}
